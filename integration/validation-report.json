@@ -1,0 +1,10 @@
+{
+  "date": "2026-10-20",
+  "upstream_sha": "08597facd3aff397bbc41c1a4f91fb05245aebcd",
+  "api_images": 3,
+  "api_videos": 1,
+  "full_app_ui_verified": false,
+  "native_validator": "passed",
+  "models": 4,
+  "negative_checks": 2
+}

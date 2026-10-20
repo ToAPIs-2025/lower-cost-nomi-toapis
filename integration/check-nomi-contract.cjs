@@ -1,0 +1,22 @@
+const fs = require('node:fs');
+const path = require('node:path');
+const Module = require('node:module');
+const assert = require('node:assert/strict');
+const runtime = path.resolve(process.argv[3] || 'node_modules');
+process.env.NODE_PATH = runtime; Module._initPaths();
+const ts = require('typescript');
+require.extensions['.ts'] = function(module, filename) {
+ const text = ts.transpileModule(fs.readFileSync(filename,'utf8'), {compilerOptions:{module:ts.ModuleKind.CommonJS,target:ts.ScriptTarget.ES2022,esModuleInterop:true}}).outputText;
+ module._compile(text,filename);
+};
+const root=path.resolve(process.argv[2]);
+const {validateProviderAdapterDraft,adapterSuppliedContractSchema}=require(path.join(root,'electron/providerAdapter/validator.ts'));
+const draft=JSON.parse(fs.readFileSync(path.join(__dirname,'nomi-adapter-draft.json'),'utf8'));
+const options={providerBaseUrl:draft.provider.baseUrl,selectedModelKeys:draft.models.map(m=>m.modelKey)};
+const checked=validateProviderAdapterDraft(draft,options);assert.equal(checked.models.length,4);
+adapterSuppliedContractSchema.parse(Object.fromEntries(Object.entries(draft).filter(([key])=>key!=='provider')));
+const broken=structuredClone(draft);delete broken.models[0].modes[0].query;
+assert.throws(()=>validateProviderAdapterDraft(broken,options));
+const cross=structuredClone(draft);cross.models[0].modes[0].query.path='https://unrelated.invalid/task';
+assert.throws(()=>validateProviderAdapterDraft(cross,options));
+console.log(JSON.stringify({project:'Nomi',upstream_validator:'passed',models:4,negative_checks:2,paid_calls:0,full_ui_verified:false}));

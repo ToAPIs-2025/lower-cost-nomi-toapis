@@ -1,0 +1,8 @@
+{
+  "kind": "image",
+  "model": "gpt-image-2.5-flare",
+  "prompt": "An original cinematic storyboard still: a tiny red courier robot stands beside a warm illuminated parcel kiosk at a rainy harbor at blue hour, polished cobblestone reflections, distant fishing boats, gentle mist, hopeful atmosphere, tactile miniature film set, clear single composition, 16:9 landscape, no text, no logos, no watermark.",
+  "size": "1536x864",
+  "n": 1,
+  "run_id": "1020-nomi-gpt-image-2.5-flare"
+}

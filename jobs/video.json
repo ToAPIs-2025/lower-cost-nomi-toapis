@@ -1,0 +1,11 @@
+{
+  "kind": "video",
+  "model": "seedance-2-mini",
+  "prompt": "A slow cinematic push-in toward the tiny red courier robot and warm parcel kiosk. Rain makes delicate ripples in the harbor reflections and a distant boat gently rocks. Preserve the original robot design and single continuous scene. No speech, no text, no cuts.",
+  "duration": 4,
+  "resolution": "480p",
+  "aspect_ratio": "16:9",
+  "generate_audio": false,
+  "first_frame_file": "examples/gpt-image-2-vip.png",
+  "run_id": "1020-nomi-seedance-2-mini"
+}

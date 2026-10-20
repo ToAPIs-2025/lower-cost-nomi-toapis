@@ -1,0 +1,336 @@
+{
+  "sources": [
+    {
+      "url": "https://docs.toapis.com/docs/en/api-reference/tasks/image-status",
+      "evidence": "Official task/status or image upload contract, cross-checked against live ToAPIs requests."
+    },
+    {
+      "url": "https://docs.toapis.com/docs/en/api-reference/tasks/video-status",
+      "evidence": "Official task/status or image upload contract, cross-checked against live ToAPIs requests."
+    },
+    {
+      "url": "https://docs.toapis.com/docs/en/api-reference/uploads/images",
+      "evidence": "Official task/status or image upload contract, cross-checked against live ToAPIs requests."
+    }
+  ],
+  "models": [
+    {
+      "modelKey": "gpt-image-2-vip",
+      "labelZh": "gpt-image-2(VIP)",
+      "kind": "image",
+      "modes": [
+        {
+          "taskKind": "text_to_image",
+          "delivery": "asynchronous",
+          "create": {
+            "method": "POST",
+            "path": "/v1/images/generations",
+            "headers": {
+              "Authorization": "Bearer {{user_api_key}}",
+              "Content-Type": "application/json"
+            },
+            "body": {
+              "model": "{{model.modelKey}}",
+              "prompt": "{{request.prompt}}",
+              "size": "1536x864",
+              "n": 1,
+              "resolution": "1K",
+              "quality": "low"
+            },
+            "response_mapping": {
+              "task_id": "id",
+              "status": "status"
+            },
+            "provider_meta_mapping": {
+              "task_id": "id"
+            }
+          },
+          "query": {
+            "method": "GET",
+            "path": "/v1/images/generations/{{providerMeta.task_id}}",
+            "headers": {
+              "Authorization": "Bearer {{user_api_key}}",
+              "Content-Type": "application/json"
+            },
+            "response_mapping": {
+              "status": "status",
+              "image_url": "result.data.0.url",
+              "error_message": "error.message"
+            }
+          },
+          "statusMapping": {
+            "queued": [
+              "queued",
+              "pending",
+              "submitted"
+            ],
+            "running": [
+              "processing",
+              "running",
+              "in_progress"
+            ],
+            "succeeded": [
+              "completed",
+              "succeeded"
+            ],
+            "failed": [
+              "failed",
+              "cancelled",
+              "expired"
+            ]
+          },
+          "sourceUrls": [
+            "https://docs.toapis.com/docs/en/api-reference/tasks/image-status"
+          ]
+        }
+      ]
+    },
+    {
+      "modelKey": "gpt-image-2",
+      "labelZh": "gpt-image-2",
+      "kind": "image",
+      "modes": [
+        {
+          "taskKind": "text_to_image",
+          "delivery": "asynchronous",
+          "create": {
+            "method": "POST",
+            "path": "/v1/images/generations",
+            "headers": {
+              "Authorization": "Bearer {{user_api_key}}",
+              "Content-Type": "application/json"
+            },
+            "body": {
+              "model": "{{model.modelKey}}",
+              "prompt": "{{request.prompt}}",
+              "size": "1536x864",
+              "n": 1,
+              "resolution": "1K",
+              "metadata": {
+                "resolution": "1K"
+              }
+            },
+            "response_mapping": {
+              "task_id": "id",
+              "status": "status"
+            },
+            "provider_meta_mapping": {
+              "task_id": "id"
+            }
+          },
+          "query": {
+            "method": "GET",
+            "path": "/v1/images/generations/{{providerMeta.task_id}}",
+            "headers": {
+              "Authorization": "Bearer {{user_api_key}}",
+              "Content-Type": "application/json"
+            },
+            "response_mapping": {
+              "status": "status",
+              "image_url": "result.data.0.url",
+              "error_message": "error.message"
+            }
+          },
+          "statusMapping": {
+            "queued": [
+              "queued",
+              "pending",
+              "submitted"
+            ],
+            "running": [
+              "processing",
+              "running",
+              "in_progress"
+            ],
+            "succeeded": [
+              "completed",
+              "succeeded"
+            ],
+            "failed": [
+              "failed",
+              "cancelled",
+              "expired"
+            ]
+          },
+          "sourceUrls": [
+            "https://docs.toapis.com/docs/en/api-reference/tasks/image-status"
+          ]
+        }
+      ]
+    },
+    {
+      "modelKey": "gpt-image-2.5-flare",
+      "labelZh": "gpt-image-2.5-flare",
+      "kind": "image",
+      "modes": [
+        {
+          "taskKind": "text_to_image",
+          "delivery": "asynchronous",
+          "create": {
+            "method": "POST",
+            "path": "/v1/images/generations",
+            "headers": {
+              "Authorization": "Bearer {{user_api_key}}",
+              "Content-Type": "application/json"
+            },
+            "body": {
+              "model": "{{model.modelKey}}",
+              "prompt": "{{request.prompt}}",
+              "size": "1536x864",
+              "n": 1,
+              "metadata": {
+                "resolution": "1K"
+              },
+              "quality": "high"
+            },
+            "response_mapping": {
+              "task_id": "id",
+              "status": "status"
+            },
+            "provider_meta_mapping": {
+              "task_id": "id"
+            }
+          },
+          "query": {
+            "method": "GET",
+            "path": "/v1/images/generations/{{providerMeta.task_id}}",
+            "headers": {
+              "Authorization": "Bearer {{user_api_key}}",
+              "Content-Type": "application/json"
+            },
+            "response_mapping": {
+              "status": "status",
+              "image_url": "result.data.0.url",
+              "error_message": "error.message"
+            }
+          },
+          "statusMapping": {
+            "queued": [
+              "queued",
+              "pending",
+              "submitted"
+            ],
+            "running": [
+              "processing",
+              "running",
+              "in_progress"
+            ],
+            "succeeded": [
+              "completed",
+              "succeeded"
+            ],
+            "failed": [
+              "failed",
+              "cancelled",
+              "expired"
+            ]
+          },
+          "sourceUrls": [
+            "https://docs.toapis.com/docs/en/api-reference/tasks/image-status"
+          ]
+        }
+      ]
+    },
+    {
+      "modelKey": "seedance-2-mini",
+      "labelZh": "seedance-2-mini",
+      "kind": "video",
+      "modes": [
+        {
+          "taskKind": "image_to_video",
+          "delivery": "asynchronous",
+          "referenceParam": "image_url",
+          "referenceShape": "single",
+          "create": {
+            "method": "POST",
+            "path": "/v1/videos/generations",
+            "headers": {
+              "Authorization": "Bearer {{user_api_key}}",
+              "Content-Type": "application/json"
+            },
+            "body": {
+              "model": "{{model.modelKey}}",
+              "prompt": "{{request.prompt}}",
+              "duration": 4,
+              "resolution": "480p",
+              "aspect_ratio": "16:9",
+              "generate_audio": false,
+              "image_with_roles": [
+                {
+                  "url": "{{request.params.image_url}}",
+                  "role": "first_frame"
+                }
+              ]
+            },
+            "response_mapping": {
+              "task_id": "id",
+              "status": "status"
+            },
+            "provider_meta_mapping": {
+              "task_id": "id"
+            }
+          },
+          "query": {
+            "method": "GET",
+            "path": "/v1/videos/generations/{{providerMeta.task_id}}",
+            "headers": {
+              "Authorization": "Bearer {{user_api_key}}",
+              "Content-Type": "application/json"
+            },
+            "response_mapping": {
+              "status": "status",
+              "video_url": "result.data.0.url",
+              "error_message": "error.message"
+            }
+          },
+          "statusMapping": {
+            "queued": [
+              "queued",
+              "pending",
+              "submitted"
+            ],
+            "running": [
+              "processing",
+              "running",
+              "in_progress"
+            ],
+            "succeeded": [
+              "completed",
+              "succeeded"
+            ],
+            "failed": [
+              "failed",
+              "cancelled",
+              "expired"
+            ]
+          },
+          "sourceUrls": [
+            "https://docs.toapis.com/docs/en/api-reference/tasks/video-status",
+            "https://docs.toapis.com/docs/en/api-reference/uploads/images"
+          ]
+        }
+      ]
+    }
+  ],
+  "assetIngestion": {
+    "strategy": "upload-multipart",
+    "endpoint": "https://toapis.com/v1/uploads/images",
+    "fileField": "file",
+    "urlPath": "data.url",
+    "authType": "bearer",
+    "accepts": [
+      "image"
+    ],
+    "sourceUrl": "https://docs.toapis.com/docs/en/api-reference/uploads/images"
+  },
+  "selfCheck": {
+    "kind": "model-list"
+  },
+  "omitted": [
+    {
+      "field": "image_edit",
+      "reason": "This batch validates text-to-image and first-frame video only. No native edit certification is claimed.",
+      "sourceUrl": "https://docs.toapis.com/docs/en/api-reference/tasks/image-status"
+    }
+  ]
+}
