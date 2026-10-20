@@ -1,0 +1,35 @@
+{
+  "project": "Nomi",
+  "model": "seedance-2-5",
+  "kind": "video",
+  "mode": "text-to-video",
+  "status": "completed",
+  "parameters": {
+    "duration": 4,
+    "resolution": "480p",
+    "aspect_ratio": "16:9",
+    "generate_audio": false,
+    "output_format": "mp4"
+  },
+  "cost": {
+    "model": "seedance-2-5",
+    "billing_status": "settled",
+    "actual_cost_usd": "0.3883",
+    "actual_credits": "77.66"
+  },
+  "case_price_usd": "0.3883",
+  "case_price_basis": "API billing=settled",
+  "actual_seconds": "4.04",
+  "actual_dimensions": [
+    854,
+    480
+  ],
+  "actual_usd_per_second": "0.09611386138613861386138613861",
+  "fully_decoded": true,
+  "audio_stream_present": false,
+  "file": "video-comparison/seedance-2-5.mp4",
+  "catalog_rate": "10",
+  "catalog_unit": "1m_tokens",
+  "prompt_file": "video-comparison/prompt.txt",
+  "validation_scope": "Independent API T2V case; not native Nomi adapter registration or full application acceptance"
+}

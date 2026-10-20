@@ -17,3 +17,15 @@
 | seedance-2-mini<br>480p / 4.04s / 无声 | 视频 | $0.13338 | $3.285714/1M total tokens | API billing=settled |
 
 [Current-key pricing documentation](https://docs.toapis.com/docs/en/api-reference/account/pricing). Rates are not a reserved generation quote. Receipt settlement takes priority; raw account logs and credentials are private.
+
+<!-- extra-video-models -->
+
+## Additional video cases, ascending
+
+| Model | Request | Decoded length | API-settled cost | Case USD/s | Current preset rate |
+|---|---|---:|---:|---:|---|
+| kling-3.0-turbo | 4s / 720p | 4.04s | $0.32 | $0.079208/s | $0.08/s |
+| MiniMax-H3 | 5s / 768p | 5.17s | $0.32 | $0.061896/s | $0.064/s |
+| seedance-2-5 | 4s / 480p | 4.04s | $0.3883 | $0.096114/s | $10/1M total tokens |
+
+Independent T2V calls, different resolution/duration. [Full evidence](video-comparison/README.md).

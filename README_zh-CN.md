@@ -71,3 +71,19 @@ An original cinematic storyboard still: a tiny red courier robot stands beside a
 ## 许可与边界
 
 Original guide/adapter code: MIT. Upstream source and trademarks keep their own license and ownership. The OpenShorts fork retains its upstream MIT license. No existing sponsor/referral links were replaced. No audio integration claim is made.
+
+<!-- extra-video-models -->
+
+## 补充：Seedance 2.5、MiniMax-H3、Kling
+
+| 模型 | 请求 | 实际时长 | API确认消费 | 本例美元/秒 | 当前档位价格 |
+|---|---|---:|---:|---:|---|
+| kling-3.0-turbo | 4s / 720p | 4.04s | $0.32 | $0.079208/s | $0.08/s |
+| MiniMax-H3 | 5s / 768p | 5.17s | $0.32 | $0.061896/s | $0.064/s |
+| seedance-2-5 | 4s / 480p | 4.04s | $0.3883 | $0.096114/s | $10/1M total tokens |
+
+[Full videos, prompt and script](video-comparison/README_zh-CN.md)
+
+![Video cases](screenshots/cn/video-models.png)
+
+以上为独立API文生视频案例，非Nomi原生界面验收。分辨率与时长不同，费用按本例结算；NovaNova旧任务仍待核对。

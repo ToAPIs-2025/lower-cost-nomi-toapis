@@ -1,0 +1,33 @@
+{
+  "project": "Nomi",
+  "model": "MiniMax-H3",
+  "kind": "video",
+  "mode": "text-to-video",
+  "status": "completed",
+  "parameters": {
+    "duration": 5,
+    "resolution": "768p",
+    "aspect_ratio": "16:9"
+  },
+  "cost": {
+    "model": "MiniMax-H3",
+    "billing_status": "settled",
+    "actual_cost_usd": "0.32",
+    "actual_credits": "64"
+  },
+  "case_price_usd": "0.32",
+  "case_price_basis": "API billing=settled",
+  "actual_seconds": "5.17",
+  "actual_dimensions": [
+    1344,
+    768
+  ],
+  "actual_usd_per_second": "0.06189555125725338491295938104",
+  "fully_decoded": true,
+  "audio_stream_present": true,
+  "file": "video-comparison/MiniMax-H3.mp4",
+  "catalog_rate": "0.064",
+  "catalog_unit": "second",
+  "prompt_file": "video-comparison/prompt.txt",
+  "validation_scope": "Independent API T2V case; not native Nomi adapter registration or full application acceptance"
+}

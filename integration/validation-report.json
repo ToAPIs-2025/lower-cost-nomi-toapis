@@ -6,5 +6,6 @@
   "full_app_ui_verified": false,
   "native_validator": "passed",
   "models": 4,
-  "negative_checks": 2
+  "negative_checks": 2,
+  "additional_api_t2v_videos": 3
 }
