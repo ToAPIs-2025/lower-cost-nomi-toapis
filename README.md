@@ -1,8 +1,8 @@
 # Lower-cost Nomi image and video guide
 
-<!-- TOAPIS-PROJECT-LINKS-20261022 -->
-[ToAPIs homepage](https://home.toapis.com/Nomi) · [Model pricing](https://pricing.toapis.com/Nomi)
-<!-- /TOAPIS-PROJECT-LINKS-20261022 -->
+<!-- TOAPIS-OWNER-INVITE -->
+[Sign up / use ToAPIs](https://toapis.com/login?aff=BEWR) · [Guide price table](PRICING.md)
+<!-- /TOAPIS-OWNER-INVITE -->
 
 
 
@@ -48,7 +48,7 @@ Original project examples, historical charges and integration instructions follo
 
 Local-first storyboards, model connections and a video timeline.
 
-[中文](README_zh-CN.md) · [Model & pricing](https://pricing.toapis.com/Nomi) · [Upstream](https://github.com/aqm857886159/Nomi)
+[中文](README_zh-CN.md) · [Model & pricing](https://toapis.com/login?aff=BEWR) · [Upstream](https://github.com/aqm857886159/Nomi)
 
 **Independent ToAPIs community guide, not an upstream-endorsed edition.** This validates API cases and configuration/module boundaries; full upstream product acceptance is pending.
 
