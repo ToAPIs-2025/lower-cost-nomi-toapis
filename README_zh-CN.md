@@ -1,5 +1,10 @@
 # 更低成本的 Nomi 图片与视频方案
 
+<!-- TOAPIS-PROJECT-LINKS-20261022 -->
+[ToAPIs 官网首页](https://home.toapis.com/Nomi) · [模型价格](https://pricing.toapis.com/Nomi)
+<!-- /TOAPIS-PROJECT-LINKS-20261022 -->
+
+
 
 <!-- TOAPIS-MODELS-20261020 -->
 ## 模型与价格更新 · 2026-10-20
@@ -43,7 +48,7 @@ gpt-image-2(VIP)通用价格为$0.0019/image起；本例low/1K为$0.0019/image�
 
 本地分镜、模型接入与视频时间轴。
 
-[English](README.md) · [Model & pricing](https://go2v.toapis.com/1020_nm_g) · [Upstream](https://github.com/aqm857886159/Nomi)
+[English](README.md) · [Model & pricing](https://pricing.toapis.com/Nomi) · [Upstream](https://github.com/aqm857886159/Nomi)
 
 **ToAPIs独立社区方案，非上游官方版本。** 本轮验证API、配置契约或局部Adapter，完整产品流程尚未验收。
 
